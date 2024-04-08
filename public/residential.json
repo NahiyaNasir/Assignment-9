@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Villa with Ocean View",
+      "segment_name": "Luxury",
+      "image": "https://i.ibb.co/JnF52nn/maxim-hopman-erl3g-MLz-Wt0-unsplash.jpg",
+      "description": "Experience unparalleled luxury in this stunning villa overlooking the ocean. With spacious rooms, modern amenities, and breathtaking views, this is the epitome of luxury living.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Malibu, California",
+      "facilities": ["Living Room", "Swimming Pool", "Gourmet Kitchen"]
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Cottage in the Countryside",
+      "segment_name": "Traditional",
+      "image": "https://i.ibb.co/vQYG3qf/emma-frances-logan-Vi9-Rqd-N5-Gb-Q-unsplash.jpg",
+      "description": "Escape to the tranquility of the countryside in this charming cottage. Surrounded by lush greenery and scenic views, this cozy retreat offers peace and serenity.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1500 sq ft",
+      "location": "Cotswolds, England",
+      "facilities": ["Living Room", "Garden", "Fireplace"]
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Apartment in the City Center",
+      "segment_name": "Urban",
+      "image": "https://i.ibb.co/pyH3c5D/vadim-babenko-b-DVOz-Y6-AJqo-unsplash.jpg",
+      "description": "Live in style in this sleek and contemporary apartment located in the heart of the city. With cutting-edge design and convenient amenities, urban living has never been more enticing.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "1200 sq ft",
+      "location": "New York City, USA",
+      "facilities": ["Open Kitchen", "Fitness Center", "Concierge Service"]
+    },
+    {
+      "id": 4,
+      "estate_title": "Charming Townhouse in Historic District",
+      "segment_name": "Heritage",
+      "image": "https://i.ibb.co/Bzc5fdd/fons-heijnsbroek-q-Lj-A8a3mo-J4-unsplash.jpg",
+      "description": "Step back in time with this beautifully restored townhouse nestled in a historic district. Elegant architecture, period features, and modern comforts blend seamlessly in this timeless gem.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Charleston, South Carolina",
+      "facilities": ["Formal Dining Room", "Courtyard", "Library"]
+    },
+    {
+      "id": 5,
+      "estate_title": "Sunny Beach House with Private Dock",
+      "segment_name": "Coastal",
+      "image": "https://i.ibb.co/3pTJ2MV/quino-al-m-BQIf-Klvow-M-unsplash.jpg",
+      "description": "Bask in the sun and sea breeze at this inviting beach house with its own private dock. Perfect for entertaining or relaxing, this coastal retreat offers the ultimate beachfront lifestyle.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "Miami Beach, Florida",
+      "facilities": ["Oceanfront Deck", "Boat Slip", "Outdoor Kitchen"]
+    },
+    {
+      "id": 6,
+      "estate_title": "Mountain Retreat with Panoramic Views",
+      "segment_name": "Scenic",
+      "image": "https://i.ibb.co/PmXGn5d/luca-bravo-ESkw2ay-O2-As-unsplash.jpg",
+      "description": "Escape to nature in this picturesque mountain retreat boasting breathtaking panoramic views. Surrounded by pristine wilderness, this serene oasis offers the perfect blend of luxury and tranquility.",
+      "price": "$1,800,000",
+      "status": "sale",
+      "area": "2200 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["Spa", "Hiking Trails", "Outdoor Fireplace"]
+    }
+  ]
+  
