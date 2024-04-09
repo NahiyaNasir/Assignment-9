@@ -1,10 +1,19 @@
-import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
-    return (
-        <div>
-             <div className="navbar  fixed z-10 shadow-lg min-h-">
+  const { logOut, currentUser } = useContext(AuthContext);
+  const handelSignOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result.currentUser)
+      })
+      .catch((error) => console.error(error));
+  };
+  return (
+    <div>
+      <div className="navbar  fixed z-10 shadow-lg min-h-">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,7 +58,7 @@ const Navbar = () => {
                   isActive ? " font-bold  bg-blue-300 underline " : "font-bold"
                 }
               >
-               UserProfile
+                UserProfile
               </NavLink>
             </ul>
           </div>
@@ -75,29 +84,30 @@ const Navbar = () => {
                   : "font-bold  p-2"
               }
             >
-            UserUpdate
+              UserUpdate
             </NavLink>
-            <NavLink
-              to="/profile"
-              className={({ isActive }) =>
-                isActive
-                  ? ' font-bold  "border-solid border-2 border-indigo-600 underline p-2 text-primary '
-                  : "font-bold p-2 "
-              }
-            >
-              {" "}
-           UserProfile
-            </NavLink>
-           
           </ul>
         </div>
-        <div className="navbar-end gap-3">
-          <a className="btn  bg-[#23BE0A]">Sing up</a>
-          <a className="btn bg-[#59C6D2]">Sing in</a>
-        </div>
+        {currentUser ? (
+          <div className="navbar-end gap-3">
+            {/* <a className="btn  bg-[#23BE0A]">Logged in</a> */}
+            <button className="btn bg-[#59C6D2]" onClick={handelSignOut}>
+              Log out
+            </button>
+          </div>
+        ) : (
+          <div className="navbar-end gap-3">
+            <Link to="/register">
+              <button className="btn  bg-[#23BE0A]">Register</button>
+            </Link>
+            <Link to="/login">
+              <button className="btn bg-[#59C6D2]">Login</button>
+            </Link>
+          </div>
+        )}
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Navbar;

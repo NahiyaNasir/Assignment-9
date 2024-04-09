@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Estate = ({residential}) => {
     console.log(residential);
-    const {estate_title,segment_name,image, Status,location,price}=residential
+    const {estate_title,segment_name,image, Status,location,price,id}=residential
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -17,7 +17,7 @@ const Estate = ({residential}) => {
     <p className="text-orange-400"> Location : {location}</p>
     <p className="font-bold"> Price:{price}</p>
     <div className="card-actions justify-end">
-    <Link >
+    <Link to={`residential/${id}`}>
     <button className="btn btn-outline bg-blue-500">View Details</button></Link>
     </div>
   </div>
