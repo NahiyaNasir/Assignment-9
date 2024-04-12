@@ -15,11 +15,13 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         window.location.href = '/';
+
     })
       .catch((error) => console.error(error));
   };
 
   return (
+    
     <div className=" flex items-center justify-center my-3">
       <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <form className="card-body" onSubmit={handleLogin}>
@@ -60,7 +62,7 @@ const Login = () => {
         <p className="mx-10 mb-3">
           Need to register? Click{" "}
           <Link to="/register">
-            <span className="underline">here</span>
+            <span className="underline text-orange-400">Here</span>
           </Link>
         </p>
       </div>

@@ -34,6 +34,7 @@ const AuthProvider = ({ children }) => {
       .catch((error) => console.log(error));
   };
   const signIn = (email, password) => {
+    console.log(email,password);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const authInfo = {

@@ -91,15 +91,20 @@ const Navbar = () => {
         {currentUser ? (
           <div className="navbar-end gap-3">
             {/* <a className="btn  bg-[#23BE0A]">Logged in</a> */}
+            <div className="avatar online">
+  <div className="w-10 rounded-full">
+    <img src="" />
+  </div>
+</div>
+
             <button className="btn bg-[#59C6D2]" onClick={handelSignOut}>
               Log out
             </button>
           </div>
+          
         ) : (
           <div className="navbar-end gap-3">
-            <Link to="/register">
-              <button className="btn  bg-[#23BE0A]">Register</button>
-            </Link>
+           
             <Link to="/login">
               <button className="btn bg-[#59C6D2]">Login</button>
             </Link>
