@@ -9,7 +9,7 @@ const Estate = ({residential}) => {
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src={image} alt="Shoes" /></figure>
+  <figure><img src={image} alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">{estate_title}</h2>
     <h2 className="card-title">{segment_name}</h2>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const handelSignOut = () => {
     logOut()
       .then((result) => {
-        console.log(result.currentUser)
+        console.log(result.currentUser);
       })
       .catch((error) => console.error(error));
   };
@@ -52,14 +52,6 @@ const Navbar = () => {
               >
                 UserUpdate
               </NavLink>
-              <NavLink
-                to="/profile"
-                className={({ isActive }) =>
-                  isActive ? " font-bold  bg-blue-300 underline " : "font-bold"
-                }
-              >
-                UserProfile
-              </NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">HomesBySean</a>
@@ -70,7 +62,7 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? ' font-bold  "border-solid border-2 border-indigo-600 underline p-2 text-primary   '
+                  ? " font-bold   underline p-2 text-primary   "
                   : "font-bold p-2 "
               }
             >
@@ -80,7 +72,7 @@ const Navbar = () => {
               to="/update"
               className={({ isActive }) =>
                 isActive
-                  ? ' font-bold  "border-solid border-2 border-indigo-600 underline p-2 text-primary  '
+                  ? ' font-bold  "underline p-2 text-primary  '
                   : "font-bold  p-2"
               }
             >
@@ -92,19 +84,19 @@ const Navbar = () => {
           <div className="navbar-end gap-3">
             {/* <a className="btn  bg-[#23BE0A]">Logged in</a> */}
             <div className="avatar online">
-  <div className="w-10 rounded-full">
-    <img src="" />
-  </div>
-</div>
+              <div className="w-10 rounded-full">
+                <div className="tooltip" data-tip={currentUser.displayName}>
+                  <img src={currentUser.photoURL || " URl NOt Found"} />
+                </div>
+              </div>
+            </div>
 
             <button className="btn bg-[#59C6D2]" onClick={handelSignOut}>
               Log out
             </button>
           </div>
-          
         ) : (
           <div className="navbar-end gap-3">
-           
             <Link to="/login">
               <button className="btn bg-[#59C6D2]">Login</button>
             </Link>

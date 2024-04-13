@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-400 text-neutral-content mb-0">
+            <footer className="footer p-10 bg-neutral text-neutral-content ">
   <aside>
    <img   width={80}  height={80}  src="https://i.ibb.co/NZyKdH8/logo-real-estate-home-solutions-that-is-home-solution-527952-33-jpg-size-338-ext-jpg-ga-GA1-1-170046.jpg" alt="" />
     <p className=" text-black">HomesBySean Ltd.<br/>Providing reliable ome since 1992</p>

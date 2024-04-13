@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useParams, useLoaderData } from "react-router-dom";
 const EstateDetails = () => {
   const res = useLoaderData();
@@ -8,10 +9,12 @@ const EstateDetails = () => {
   console.log(details);
   return (
     <div>
-    
-      <div className="card lg:card-side bg-base-100 shadow-xl">
+    <Helmet>
+      <title> Details About Estate</title>
+    </Helmet>
+      <div className="card lg:card-side bg-base-100 shadow-xl my-7 mx-7">
         <figure>
-          <img src={details.image} alt="Album" />
+          <img src={details.image} alt="Album"  />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{details.estate_title}</h2>

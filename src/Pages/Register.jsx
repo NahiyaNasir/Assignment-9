@@ -1,7 +1,7 @@
 import { useContext ,useState} from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser, updateUser } = useContext(AuthContext);
@@ -33,6 +33,9 @@ const Register = () => {
   };
   return (
     <div>
+      <Helmet>
+      <title> Details About Estate</title>
+    </Helmet>
       <div className=" flex items-center justify-center my-3">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form className="card-body" onSubmit={handleRegister}>
