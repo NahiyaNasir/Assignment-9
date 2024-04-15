@@ -5,11 +5,11 @@ import Footer from "./Footer";
 const Roots = () => {
     return (
         <div className="">
-            <div className="h-16">
+            <div className="h-16 mx-auto">
             <Navbar></Navbar>
             </div>
          
-                   <div className="min-h-[calc(100vh-116)] mx-auto">
+                   <div className="max-w-6xl mx-auto">
                    <Outlet></Outlet>
                    </div>
          <Footer></Footer>

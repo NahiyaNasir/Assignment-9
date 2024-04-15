@@ -17,16 +17,20 @@ const Register = () => {
     if (password.length < 6) {
       setRegisterError("password should be at least 6 character");
       return;
-    } else if (!/[A-Z]/.test(password)) {
+    }  if (!/[A-Z]/.test(password)) {
       setRegisterError("password should be at least one upper case");
       return;
+    } if (!/[a-z]/.test(password)) {
+      setRegisterError("password should be at least one lower case");
+      return;
     }
+
         setSuccess('')
         setRegisterError('')
     createUser(email, password)
       .then(() => {
         updateUser(name, photoUrl).then(()=>{
-          window.location.href = "/";
+          // window.location.href = "/";
         })        
       })
       .catch((error) => console.error(error));
@@ -34,7 +38,7 @@ const Register = () => {
   return (
     <div>
       <Helmet>
-      <title> Details About Estate</title>
+      <title> Register Page</title>
     </Helmet>
       <div className=" flex items-center justify-center my-3">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
