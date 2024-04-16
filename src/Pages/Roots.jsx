@@ -9,7 +9,7 @@ const Roots = () => {
             <Navbar></Navbar>
             </div>
          
-                   <div className="max-w-6xl mx-auto">
+                   <div className="min-h-[calc(100vh-116)] mx-auto">
                    <Outlet></Outlet>
                    </div>
          <Footer></Footer>

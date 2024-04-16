@@ -41,7 +41,7 @@ const Register = () => {
       <title> Register Page</title>
     </Helmet>
       <div className=" flex items-center justify-center my-3">
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100  border-2 border-blue-800">
           <form className="card-body" onSubmit={handleRegister}>
             <div className="form-control">
               <label className="label">
@@ -92,14 +92,14 @@ const Register = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+              <button className="btn btn-accent">Register</button>
             </div>
           </form>
 
           <p className="mx-10 mb-5">
             Already have an account? To login, click{" "}
             <Link to="/login">
-              <span className="underline">here</span>
+              <span className="underline text-teal-400">Here</span>
             </Link>
           </p>
           {registerError && <p className=" text-red-700 mb-6 mx-6">{registerError}</p>}

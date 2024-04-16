@@ -18,7 +18,7 @@
       "image": "https://i.ibb.co/vQYG3qf/emma-frances-logan-Vi9-Rqd-N5-Gb-Q-unsplash.jpg",
       "description": "Escape to the tranquility of the countryside in this charming cottage. Surrounded by lush greenery and scenic views, this cozy retreat offers peace and serenity.",
       "price": "$300,000",
-      "status": "sale",
+      "status": "rent",
       "area": "1500 sq ft",
       "location": "Cotswolds, England",
       "facilities": ["Living Room", "Garden", "Fireplace"]
@@ -42,7 +42,7 @@
       "image": "https://i.ibb.co/Bzc5fdd/fons-heijnsbroek-q-Lj-A8a3mo-J4-unsplash.jpg",
       "description": "Step back in time with this beautifully restored townhouse nestled in a historic district. Elegant architecture, period features, and modern comforts blend seamlessly in this timeless gem.",
       "price": "$1,200,000",
-      "status": "sale",
+      "status": "rent",
       "area": "1800 sq ft",
       "location": "Charleston, South Carolina",
       "facilities": ["Formal Dining Room", "Courtyard", "Library"]
@@ -66,7 +66,7 @@
       "image": "https://i.ibb.co/PmXGn5d/luca-bravo-ESkw2ay-O2-As-unsplash.jpg",
       "description": "Escape to nature in this picturesque mountain retreat boasting breathtaking panoramic views. Surrounded by pristine wilderness, this serene oasis offers the perfect blend of luxury and tranquility.",
       "price": "$1,800,000",
-      "status": "sale",
+      "status": "rent",
       "area": "2200 sq ft",
       "location": "Aspen, Colorado",
       "facilities": ["Spa", "Hiking Trails", "Outdoor Fireplace"]

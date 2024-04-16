@@ -1,12 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext,} from "react";
 import { AuthContext } from "./AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 
 const UserProfile = () => {
     const { currentUser, updateUser } = useContext(AuthContext);
-    const [name,setName]=useState(null)
-    const[photo,setPhoto]=useState(null)
+    // const [name,setName]=useState(null)
+    // const[photo,setPhoto]=useState(null)
 
     const handleUpdate = (e) => {
         e.preventDefault();
@@ -15,17 +15,22 @@ const UserProfile = () => {
         const photoURL=form.get('photoURL')
         updateUser(displayName, photoURL).then(()=>{console.log(currentUser);});
     };
-    
+    // const handelChange=()=>{
+    //   setName
+    // }
     return (
         <div>
-            {/* <form  onSubmit={handleUpdate}>
-                <label>Name: </label><input name="displayName" className="form-control" type="text" value={currentUser.displayName}/>
-                <label>Photo URL: </label><input name="photoURL" className="form-control" type="text" value={currentUser.photoURL}/>
+            <Helmet>
+      <title> User Update</title>
+    </Helmet>
+            <form  onSubmit={handleUpdate}>
+                <label>Name: </label><input name="displayName" className="form-control" type="text"placeholder="Name" defaultValue={currentUser.displayName}/>
+                <label>Photo URL: </label><input name="photoURL" className="form-control" type="text" defaultValue={currentUser.photoURL}/>
                 <label>Email: </label><input readOnly name="email" className="form-control" type="text" value={currentUser.email}/>
-                <button className="btn" type='submit'>Update</button>
+                <button className="btn" type='submit'> Save Changes</button>
             </form>     
-                    */}
-                   <div>
+                   
+                   {/* <div>
       <Helmet>
       <title> User Update</title>
     </Helmet>
@@ -40,6 +45,7 @@ const UserProfile = () => {
                 type="text"
                 placeholder="Name"
                 name="name"
+                value={name}
                 className="input input-bordered"
                 required
               />
@@ -64,6 +70,8 @@ const UserProfile = () => {
                 type="text"
                 placeholder="Photo URL"
                 name="photoUrl"
+                value={photo}
+                onChange={handelChange}
                 className="input input-bordered"
                 required
               />
@@ -78,7 +86,7 @@ const UserProfile = () => {
          
         </div>
       </div>
-    </div>
+    </div> */}
         </div>
     );
 };

@@ -17,7 +17,7 @@ const router = createBrowserRouter([
 loader:()=>fetch('/residential.json')
         },        
         {
-          path:"/update",
+          path:"/profile",
           element:<UserProfile></UserProfile>
         },
         {

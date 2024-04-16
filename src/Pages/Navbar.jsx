@@ -45,7 +45,7 @@ const Navbar = () => {
                 Home
               </NavLink>
               <NavLink
-                to="/update"
+                to="/profile"
                 className={({ isActive }) =>
                   isActive ? " font-bold  bg-blue-300 underline " : "font-bold"
                 }
@@ -69,7 +69,7 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink
-              to="/update"
+              to="/profile"
               className={({ isActive }) =>
                 isActive
                   ? ' font-bold  "underline p-2 text-primary  '

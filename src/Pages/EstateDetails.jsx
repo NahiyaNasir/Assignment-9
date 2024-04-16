@@ -12,7 +12,7 @@ const EstateDetails = () => {
     <Helmet>
       <title> Details About Estate</title>
     </Helmet>
-      <div className="card lg:card-side bg-base-100 shadow-xl my-7 mx-7">
+      <div className="card lg:card-side bg-base-100 shadow-xl  my-7 mx-auto max-w-6xl">
         <figure>
           <img src={details.image} alt="Album"  />
         </figure>
