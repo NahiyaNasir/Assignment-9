@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
   const logOut = () => {
     setaLoading(true);
     return signOut(auth)
-      .then(console.log("Signed out"))
+      .then(alert("Signed out"))
       .catch((error) => console.log(error));
   };
   const signIn = (email, password) => {

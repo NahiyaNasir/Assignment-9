@@ -3,10 +3,15 @@ import { AuthContext } from "./AuthProvider";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { useNavigate,useLocation } from "react-router-dom";
 const Login = () => {
   const { signIn, signInWithGoogle, signInWithGithub } =
     useContext(AuthContext);
+  const location=useLocation()
+  const navigate=useNavigate()
+
   const handleLogin = (e) => {
+
     e.preventDefault();
     const form = new FormData(e.currentTarget);
 
@@ -16,21 +21,30 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-        window.location.href = "/";
+        navigate( location?.state?  location.state :'/')
+      alert('user login successfully')
+     
       })
-      .catch((error) => console.error(error));
+      .catch((error) => alert(error));
+    
   };
   const handelGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        navigate( location?.state?  location.state :'/')
+        alert('User Login Successfully With Google')
       })
-      .catch((error) => console.error(error));
+      .catch((error) => alert(error));
+     
   };
   const handelGithubSignIn = () => {
     signInWithGithub()
-      .then((result) => console.log(result.user))
+      .then((result) =>{console.log(result.user);
+        navigate( location?.state?  location.state :'/')
+      alert('user Login Successfully with Github')} )
       .catch((error) => console.error(error));
+     
   };
 
   return (

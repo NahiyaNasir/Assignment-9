@@ -31,9 +31,11 @@ const Register = () => {
       .then(() => {
         updateUser(name, photoUrl).then(()=>{
           // window.location.href = "/";
+          alert('User Created Successfully')
         })        
       })
-      .catch((error) => console.error(error));
+      .catch((error) => alert(error));
+     
   };
   return (
     <div>

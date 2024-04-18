@@ -27,15 +27,7 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-      {
-        path: "residential/:id",
-        loader: () => fetch("/residential.json"),
-        element: (
-          <ProtectedRoute>
-            <EstateDetails></EstateDetails>
-          </ProtectedRoute>
-        ),
-      },
+     
       {
         path: "/login",
         element: <Login></Login>,
@@ -43,6 +35,15 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "residential/:id",
+        loader: () => fetch("/residential.json"),
+        element: (
+              <ProtectedRoute> <EstateDetails></EstateDetails>
+              </ProtectedRoute>
+           
+        ),
       },
       {
         path: "/review",
