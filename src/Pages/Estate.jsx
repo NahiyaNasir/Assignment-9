@@ -8,7 +8,7 @@ const Estate = ({ residential }) => {
     residential;
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl h-[500px]">
+      <div className="card card-compact w-96 bg-base-100 shadow-xl ">
         <div className="absolute w-10 h-10  rounded-full -top-5  bg-cyan-400 p-2 text-center">
     
          {status}

@@ -39,7 +39,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? " font-bold bg-blue-300  underline " : "font-bold"
+                  isActive ? " font-bold bg-blue-300 " : "font-bold"
                 }
               >
                 Home
@@ -47,11 +47,21 @@ const Navbar = () => {
               <NavLink
                 to="/profile"
                 className={({ isActive }) =>
-                  isActive ? " font-bold  bg-blue-300 underline " : "font-bold"
+                  isActive ? " font-bold  bg-blue-300  " : "font-bold"
                 }
               >
                 UserUpdate
               </NavLink>
+              <NavLink
+              to="/review"
+              className={({ isActive }) =>
+                isActive
+                  ? ' font-bold  " p-2 text-primary  '
+                  : "font-bold  p-2"
+              }
+            >
+             Review
+            </NavLink>
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">HomesBySean</a>
@@ -62,7 +72,7 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? " font-bold   underline p-2 text-primary   "
+                  ? " font-bold    p-2 text-primary   "
                   : "font-bold p-2 "
               }
             >
@@ -72,25 +82,36 @@ const Navbar = () => {
               to="/profile"
               className={({ isActive }) =>
                 isActive
-                  ? ' font-bold  "underline p-2 text-primary  '
+                  ? ' font-bold  " p-2 text-primary  '
                   : "font-bold  p-2"
               }
             >
               UserUpdate
             </NavLink>
+            <NavLink
+              to="/review"
+              className={({ isActive }) =>
+                isActive
+                  ? ' font-bold  " p-2 text-primary  '
+                  : "font-bold  p-2"
+              }
+            >
+             Review
+            </NavLink>
           </ul>
         </div>
         {currentUser ? (
           <div className="navbar-end gap-3">
-            {/* <a className="btn  bg-[#23BE0A]">Logged in</a> */}
+       
+            
+            <div className="tooltip tooltip-bottom" data-tip={currentUser.displayName}>
             <div className="avatar online">
               <div className="w-10 rounded-full">
-                <div className="tooltip" data-tip={currentUser.displayName}>
-                  <img src={currentUser.photoURL || " URl NOt Found"} />
-                </div>
+              <img src={currentUser.photoURL || " URl NOt Found"} />
+               
               </div>
             </div>
-
+</div>
             <button className="btn bg-[#59C6D2]" onClick={handelSignOut}>
               Log out
             </button>

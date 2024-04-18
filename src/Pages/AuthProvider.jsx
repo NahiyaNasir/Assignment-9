@@ -6,54 +6,66 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   updateProfile,
-  signOut
+  signOut,
 } from "firebase/auth";
-import { GoogleAuthProvider,signInWithPopup,GithubAuthProvider  } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  GithubAuthProvider,
+} from "firebase/auth";
 
 const googleProvider = new GoogleAuthProvider();
-const githubProvider= new GithubAuthProvider()
+const githubProvider = new GithubAuthProvider();
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [currentUser, setUser] = useState(null);
+  const [loading, setaLoading] = useState(true);
   const createUser = (email, password) => {
+    setaLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const updateUser = (displayName, photoURL)=> { 
-    return updateProfile(auth.currentUser, {displayName, photoURL});
+  const updateUser = (displayName, photoURL) => {
+    setaLoading(true);
+    return updateProfile(auth.currentUser, { displayName, photoURL });
   };
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("user details", currentUser);
       setUser(currentUser);
-      //   setLoading(false);
+      setaLoading(false);
     });
     return () => {
       unSubscribe();
     };
   }, []);
   const logOut = () => {
+    setaLoading(true);
     return signOut(auth)
       .then(console.log("Signed out"))
       .catch((error) => console.log(error));
   };
   const signIn = (email, password) => {
-    console.log(email,password);
+    console.log(email, password);
+    setaLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
-   const signInWithGoogle=()=>{
-    return signInWithPopup(auth,googleProvider)
-   }
-   const signInWithGithub=()=>{
-    return signInWithPopup(auth,githubProvider)
-   }
+  const signInWithGoogle = () => {
+    setaLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
+  const signInWithGithub = () => {
+    setaLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
   const authInfo = {
     currentUser,
     signIn,
-    createUser, 
-    updateUser,   
+    createUser,
+    updateUser,
     logOut,
     signInWithGoogle,
-    signInWithGithub
+    signInWithGithub,
+    loading,
   };
   return (
     <div>
